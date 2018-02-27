@@ -21,4 +21,16 @@ class User:
       self.logged = False
       return False
 
+  @staticmethod                             # this is static method (by class, not by instance)
+  def passwordValidation(password):         # static method does not need "self" (there is no selfable instance)
+    if len(password) >= User.minPassLength:
+      return True
+    else:
+      return False
 
+  @classmethod
+  def passwordValidation(cls, password):    # this is class-methon (by class too, but with class-name)
+    if len(password) >= cls.minPassLength:  # class-name is like parameter; useful for inheritance
+      return True
+    else:
+      return False
