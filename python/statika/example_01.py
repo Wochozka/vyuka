@@ -38,5 +38,9 @@ class User:
   def returnID(self):                       # access directly to the ID is not nice
     return self.ID                          # in practice should be private with "__" prefix
 
+
 user1 = User("john.doe", "BestPassword")
-print("User 1:\nID: {0}")
+print("User 1: ID: {0}".format(user1.returnID()))
+user2 = User("jane.doe", "betterPassword")
+print("User 2: ID: {0}".format(user2.returnID()))
+print("Min pass length: {0}".format(User.minPassLength))
