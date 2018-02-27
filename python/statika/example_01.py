@@ -34,3 +34,9 @@ class User:
       return True
     else:
       return False
+
+  def returnID(self):                       # access directly to the ID is not nice
+    return self.ID                          # in practice should be private with "__" prefix
+
+user1 = User("john.doe", "BestPassword")
+print("User 1:\nID: {0}")
